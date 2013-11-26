@@ -30,4 +30,9 @@ class DockingStation
   end
 
 
+  def available_bikes
+    @bikes.reject {|bike| bike.broken? }
+  end
+
+
 end
