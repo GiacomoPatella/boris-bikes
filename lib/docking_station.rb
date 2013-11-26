@@ -1,38 +1,38 @@
-class DockingStation
+# class DockingStation
 
-  DEFAULT_CAPACITY = 10
-
-
-  def initialize(options = {})
-    @capacity = options.fetch(:capacity) || DEFAULT_CAPACITY
-    @bikes = []
-  end
+  # DEFAULT_CAPACITY = 10
 
 
-  def bike_count
-    @bikes.count
-  end
+  # def initialize(options = {})
+  #   @capacity = options.fetch(:capacity) || DEFAULT_CAPACITY
+  #   @bikes = []
+  # end
 
 
-  def dock(bike)
-    raise "Station is full" if full?
-    @bikes << bike
-  end
+  # def bike_count
+  #   @bikes.count
+  # end
 
 
-  def release(bike)
-    @bikes.delete(bike)
-  end
+#   def dock(bike)
+#     raise "Station is full" if full?
+#     @bikes << bike
+#   end
 
 
-  def full?
-    bike_count == @capacity
-  end
+#   def release(bike)
+#     @bikes.delete(bike)
+#   end
 
 
-  def available_bikes
-    @bikes.reject {|bike| bike.broken? }
-  end
+#   def full?
+#     bike_count == @capacity
+#   end
 
 
-end
+#   def available_bikes
+#     @bikes.reject {|bike| bike.broken? }
+#   end
+
+
+# end
