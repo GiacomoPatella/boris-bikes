@@ -1,6 +1,8 @@
 require_relative "../lib/bike_container.rb"
 require_relative "../lib/bike"
 require_relative "../lib/docking_station"
+require_relative "../lib/garage"
+
 
 class ContainerHolder; include BikeContainer; end
 
@@ -55,5 +57,12 @@ describe DockingStation do
   it 'should allow setting default capacity on initialising' do
     expect(station.capacity).to eq(123)
   end
+end
   
+describe Garage do
+    let(:garage) {DockingStation.new(:capacity => 123)}
+
+    it 'should allow setting default capacity on initialising' do
+      expect(garage.capacity).to eq(123)
+    end
 end
