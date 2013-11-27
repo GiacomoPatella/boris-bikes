@@ -9,6 +9,10 @@ include BikeContainer
   end
 
 
+  def broken_bikes
+  end
+
+
 
 end
 
