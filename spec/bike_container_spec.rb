@@ -60,7 +60,7 @@ describe DockingStation do
 end
   
 describe Garage do
-    let(:garage) {DockingStation.new(:capacity => 123)}
+    let(:garage) {Garage.new(:capacity => 123)}
 
     it 'should allow setting default capacity on initialising' do
       expect(garage.capacity).to eq(123)
