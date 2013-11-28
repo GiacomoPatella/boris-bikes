@@ -13,8 +13,8 @@ class Garage
     super(bike)
   end
 
-  def bikes_for_van
-    available_bikes
-  end
+  # def bikes_for_van
+  #   available_bikes
+  # end
 
 end

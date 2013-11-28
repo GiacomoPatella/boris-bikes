@@ -25,22 +25,34 @@ module BikeContainer
     bikes.count
   end
 
+  
   def dock(bike)
     raise "Station is full" if full?
     bikes << bike
   end
 
+  
   def release(bike)
     bikes.delete(bike)
   end
 
+  
   def full?
     bike_count == capacity
   end
+
 
   def available_bikes
     bikes.reject {|bike| bike.broken? }
   end
 
+
+    def load_bikes_from(source, method = :available_bikes)
+    bikes_to_take = source.send(method)
+    bikes_to_take.each do |bike|
+      self.dock(bike)      
+      source.release(bike)
+    end
+  end
 
 end

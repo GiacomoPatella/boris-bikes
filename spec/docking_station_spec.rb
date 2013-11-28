@@ -10,7 +10,7 @@ describe DockingStation do
   end
 
 
-  it "should accepet a bike" do
+  it "should accept a bike" do
     # we expect the station to have 0 bikes
     expect(station.bike_count).to eq(0)
     # let's dock a bike in the station
@@ -27,7 +27,7 @@ describe DockingStation do
   end
 
   xit "returns broken bikes for a van"
-  
+
   it "should know when it's full" do
     expect(station).not_to be_full
     fill_station station
@@ -56,9 +56,6 @@ describe DockingStation do
     station.dock(bad_bike)
     expect(station.broken_bikes).to eq([bad_bike])
   end
-
-
-
 
 
 end
