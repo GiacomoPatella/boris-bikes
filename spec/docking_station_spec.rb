@@ -26,6 +26,7 @@ describe DockingStation do
     expect(station.bike_count).to eq(0)
   end
 
+  xit "returns broken bikes for a van"
   
   it "should know when it's full" do
     expect(station).not_to be_full

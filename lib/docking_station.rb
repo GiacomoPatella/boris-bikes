@@ -16,9 +16,14 @@ class DockingStation
     broken_bikes.count
   end
 
-  def full_with_broken_bikes?
-    broken_bikes.count == capacity
+  def bikes_for_van
+    broken_bikes
   end
+
+
+  # def full_with_broken_bikes?
+  #   broken_bikes.count == capacity
+  # end
 
 
 
