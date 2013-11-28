@@ -17,9 +17,6 @@ module BikeContainer
     @capacity = value
   end
 
-  ##################################
-  # station = DockingStation.new
-  # station.capacity=(50) # calls  capacity=()
 
   def bike_count
     bikes.count
@@ -33,8 +30,14 @@ module BikeContainer
 
   
   def release(bike)
-    bikes.delete(bike)
+    raise "This is not a bike" if !bike.is_a? Bike
+    bikes.delete(bike) 
   end
+
+
+  # def empty?
+  #   bike_count == 0
+  # end
 
   
   def full?

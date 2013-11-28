@@ -48,7 +48,24 @@ describe BikeContainer do
     holder.dock(broken_bike)
     expect(holder.available_bikes).to eq([working_bike])
   end
+
+
+  # make release nethod more solid
+  #----------------------------------
+
+
+  it "should not release a bike that's not there" do
+     expect(holder.release(bike)).to be_nil
+  end
+
+  it "should give an error when trying to release something that's not a bike" do
+    expect{holder.release("not_bike")}.to raise_error("This is not a bike")
+
+  end
+
+
 end
+
 
 describe DockingStation do
 
@@ -58,6 +75,7 @@ describe DockingStation do
     expect(station.capacity).to eq(123)
   end
 end
+
   
 describe Garage do
     let(:garage) {Garage.new(:capacity => 123)}

@@ -31,7 +31,6 @@ describe Van do
     expect(van.bike_count).to eq(1)
   end
 
-
 end
 
 
